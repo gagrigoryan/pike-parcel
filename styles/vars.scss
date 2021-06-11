@@ -1,0 +1,60 @@
+@function get-vw($target) {
+    $vwContext: (375 * 0.01) * 1px;
+    @return ($target / $vwContext) * 1vw;
+}
+
+$green: #01da00;
+$greenHover: #019f00;
+$black: #000000;
+$grey: #6d6d6d;
+$white: #ffffff;
+$redError: #ff0000;
+
+$desktopContainerWidth: 1200px;
+$tabletLargeContainerWidth: 925px;
+$tabletContainerWidth: 668px;
+$phoneContainerWidth: get-vw(335px);
+
+// –– RESPONSIVE ––
+$largeDesktopMinWidth: 1600px;
+
+$desktopMaxWidth: 1599px;
+$desktopMinWidth: 1440px;
+
+$tabletLargeMaxWidth: 1439px;
+$tabletLargeMinWidth: 1024px;
+
+$tabletMaxWidth: 1023px;
+$tabletMinWidth: 768px;
+
+$phoneMaxWidth: 767px;
+
+@mixin desktopMedia {
+    @media screen and (max-width: $desktopMaxWidth) {
+        @content;
+    }
+}
+
+@mixin tabletLargeMedia {
+    @media screen and (max-width: $tabletLargeMaxWidth) {
+        @content;
+    }
+}
+
+@mixin tabletMedia {
+    @media screen and (max-width: $tabletMaxWidth) {
+        @content;
+    }
+}
+
+@mixin phoneMedia {
+    @media screen and (max-width: $phoneMaxWidth) {
+        @content;
+    }
+}
+
+@mixin hoverMedia {
+    @media screen and (min-width: $tabletLargeMaxWidth) {
+        @content;
+    }
+}
