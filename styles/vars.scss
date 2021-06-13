@@ -10,15 +10,16 @@ $grey: #6d6d6d;
 $white: #ffffff;
 $redError: #ff0000;
 
-$desktopContainerWidth: 1200px;
+$desktopLargeContainerWidth: 1780px;
+$desktopContainerWidth: 1170px;
 $tabletLargeContainerWidth: 925px;
 $tabletContainerWidth: 668px;
 $phoneContainerWidth: get-vw(335px);
 
 // –– RESPONSIVE ––
-$largeDesktopMinWidth: 1600px;
+$largeDesktopMinWidth: 1800px;
 
-$desktopMaxWidth: 1599px;
+$desktopMaxWidth: 1799px;
 $desktopMinWidth: 1440px;
 
 $tabletLargeMaxWidth: 1439px;

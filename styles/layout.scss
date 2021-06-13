@@ -1,8 +1,12 @@
 @import "vars";
 
 .container {
-    width: $desktopContainerWidth;
+    width: $desktopLargeContainerWidth;
     margin: 0 auto;
+
+    @include desktopMedia {
+        width: $desktopContainerWidth;
+    }
 
     @include tabletLargeMedia {
         width: $tabletLargeContainerWidth;
