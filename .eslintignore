@@ -1,0 +1,9 @@
+.cache/
+dist/
+/node_modules
+/.next/
+/build
+coverage
+.eslintrc
+prettier.config.js
+next.config.js

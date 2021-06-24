@@ -1,0 +1,56 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    composes: pNormal from "../../styles/typography.module.scss";
+    margin-bottom: 5px;
+}
+
+.labelComment {
+    composes: pNormal from "../../styles/typography.module.scss";
+    opacity: 0.7;
+}
+
+.input {
+    composes: pNormal from "../../styles/typography.module.scss";
+    border: 1px solid;
+    border-color: $grey3;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-feature-settings: "case" on;
+
+    &:focus {
+        border: 1px solid;
+        border-color: $grey1 !important;
+        box-shadow: none !important;
+    }
+
+    &:hover {
+        border: 1px solid;
+        border-color: $grey1 !important;
+        box-shadow: none !important;
+    }
+}
+
+.inputError {
+    border: 1px solid $red;
+    background: rgba(200, 16, 46, 0.03);
+}
+
+.error {
+    composes: pSmall from "../../styles/typography.module.scss";
+    color: $red;
+    margin-top: 3px;
+}

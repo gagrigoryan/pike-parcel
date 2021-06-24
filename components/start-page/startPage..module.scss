@@ -1,0 +1,119 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+  width: $pageBlockSmallWidth;
+  margin-top: 35px;
+  margin-bottom: 87px;
+
+  @include phoneMedia {
+    width: $pageBlockPhoneWidth;
+    margin: 0;
+  }
+}
+
+.wrapper {
+  padding: 52px 48px 48px 58px;
+  @include phoneMedia {
+    padding: get-vw(30px) get-vw(20px) get-vw(40px) get-vw(20px);
+  }
+}
+
+.title {
+  composes: heading2 from "../../styles/typography.module.scss";
+  composes: mobileHeading from "../../styles/typography.module.scss";
+  width: 470px;
+  color: $red;
+
+  @include phoneMedia {
+    width: 100%;
+  }
+}
+
+.text {
+  composes: pSmall from "../../styles/typography.module.scss";
+  margin-top: 40px;
+
+  @include phoneMedia {
+    margin-top: get-vw(32px);
+  }
+}
+
+.stages {
+  display: flex;
+  margin-top: 40px;
+  @include phoneMedia {
+    flex-direction: column;
+  }
+}
+
+.stage {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  @include phoneMedia {
+    &:not(:last-child) {
+      margin-bottom: get-vw(36px);
+    }
+  }
+}
+
+.stageText {
+  composes: pSmall from "../../styles/typography.module.scss";
+  width: 90%;
+  margin-top: 16px;
+  @include phoneMedia {
+    margin-top: 0;
+    margin-left: get-vw(16px);
+    width: get-vw(240px);
+  }
+}
+
+.divider {
+  width: $pageBlockSmallWidth;
+  height: 1px;
+  background-color: $grey3;
+  margin-left: -58px;
+  margin-top: 42px;
+  margin-bottom: 32px;
+  @include phoneMedia {
+    width: 100vw;
+    margin-left: get-vw(-20px);
+  }
+}
+
+.actionTitle {
+  composes: pMedium from "../../styles/typography.module.scss";
+  text-align: center;
+  width: 386px;
+  margin: 0 auto;
+  @include phoneMedia {
+    width: get-vw(277px);
+  }
+}
+
+.actionButtons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  @include phoneMedia {
+    flex-direction: column;
+    align-items: center;
+    margin-top: get-vw(20px);
+  }
+}
+
+.button {
+  width: 250px;
+  &:first-child {
+    margin-right: 17px;
+  }
+
+  @include phoneMedia {
+    width: get-vw(277px);
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

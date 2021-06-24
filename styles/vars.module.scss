@@ -1,0 +1,68 @@
+@function get-vw($target) {
+    $vwContext: (375 * 0.01) * 1px;
+    @return ($target / $vwContext) * 1vw;
+}
+
+$white: #ffffff;
+$black: #101010;
+$headingBlack: #000000;
+$red: #c8102e;
+$redHover: #c00e2f;
+$grey1: #5b6770;
+$grey2: #7c878e;
+$grey3: #bbbcbc;
+$grey4: #f4f4f4;
+
+$redShadow: 0px 2px 4px rgba(255, 0, 0, 0.25);
+
+$pageBlockWidth: 720px;
+$pageBlockSmallWidth: 686px;
+$pageBlockPhoneWidth: 100%;
+
+$desktopContainerWidth: 1170px;
+$tabletLargeContainerWidth: 960px;
+$tabletContainerWidth: 720px;
+$phoneContainerWidth: get-vw(335px);
+
+$tabletLargeMaxWidth: 1439px;
+$tabletMaxWidth: 1023px;
+$phoneMaxWidth: 767px;
+
+@mixin tabletLargeMedia {
+    @media screen and (max-width: $tabletLargeMaxWidth) {
+        @content;
+    }
+}
+
+@mixin tabletMedia {
+    @media screen and (max-width: $tabletMaxWidth) {
+        @content;
+    }
+}
+
+@mixin phoneMedia {
+    @media screen and (max-width: $phoneMaxWidth) {
+        @content;
+    }
+}
+
+@mixin hoverMedia {
+    @media screen and (min-width: $tabletLargeMaxWidth) {
+        @content;
+    }
+}
+
+:export {
+    colorWhite: $white;
+    colorBlack: $black;
+    colorRed: $red;
+    colorRedHover: $redHover;
+    colorGrey1: $grey1;
+    colorGrey2: $grey2;
+    colorGrey3: $grey3;
+    colorGrey4: $grey4;
+
+    tabletLargeMaxWidth: $tabletLargeMaxWidth;
+    tabletMaxWidth: $tabletMaxWidth;
+    phoneMaxWidth: $phoneMaxWidth;
+}

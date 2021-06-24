@@ -1,0 +1,69 @@
+@import "../../styles/vars.module";
+
+.wrapper {
+    display: block;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.input {
+    display: none;
+}
+
+.label {
+    color: $grey1;
+    composes: pNormal from "../../styles/typography.module.scss";
+    margin-left: 12px;
+    user-select: none;
+
+    .input:checked ~ & {
+        color: $black;
+    }
+}
+
+.box {
+    min-width: 20px;
+    min-height: 20px;
+    border: 1px solid $grey3;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    box-sizing: border-box;
+
+    svg {
+        height: 10px;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $black;
+    }
+
+    .input:checked + & {
+        background-color: $red;
+        border-color: $red;
+        filter: drop-shadow($redShadow);
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+            border: 2px solid $black;
+            filter: none;
+            svg path {
+                fill: $black;
+            }
+        }
+    }
+}
+
+.error {
+    composes: error from "../input/baseInput.module.scss";
+    margin-top: 8px;
+    display: block;
+}

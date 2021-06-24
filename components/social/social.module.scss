@@ -1,0 +1,20 @@
+@import "../../styles/vars.module";
+
+.social {
+    width: 40px;
+    height: 40px;
+    background: $white;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        svg path {
+            fill: $red;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/vars.module";
+
+.container {
+    composes: container from "../input/baseInput.module.scss";
+}
+
+.label {
+    composes: label from "../input/baseInput.module.scss";
+    width: 434px;
+
+    @include phoneMedia {
+        width: 100%;
+    }
+}
+
+.error {
+    composes: error from "../input/baseInput.module.scss";
+}
+
+.textarea {
+    composes: input from "../input/baseInput.module.scss";
+    resize: none;
+    padding: 16px;
+    height: 104px;
+}
+
+.fieldError {
+    composes: inputError from "../input/baseInput.module.scss";
+}

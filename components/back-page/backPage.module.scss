@@ -1,0 +1,47 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+  width: $pageBlockSmallWidth;
+  margin-top: 35px;
+  margin-bottom: 163px;
+
+  @include phoneMedia {
+    width: $pageBlockPhoneWidth;
+    margin: 0;
+  }
+}
+
+.wrapper {
+  padding: 52px 80px 40px 80px;
+
+  @include phoneMedia {
+    padding: get-vw(30px) get-vw(20px) get-vw(43px) get-vw(20px);
+  }
+}
+
+.title {
+  composes: heading2 from "../../styles/typography.module.scss";
+  composes: mobileHeading from "../../styles/typography.module.scss";
+  text-align: center;
+  width: 526px;
+  color: $red;
+  @include phoneMedia {
+    width: 100%;
+  }
+}
+
+.text {
+  composes: pMedium from "../../styles/typography.module.scss";
+  text-align: center;
+  width: 480px;
+  margin: 30px auto 37px auto;
+  font-feature-settings: "case" on;
+  @include phoneMedia {
+    width: get-vw(277px);
+  }
+}
+
+.button {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

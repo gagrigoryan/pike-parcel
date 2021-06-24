@@ -1,0 +1,29 @@
+@import "vars.module";
+
+.link {
+    color: $red;
+    text-decoration: none;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid $red;
+    composes: pNormal from "typography.module.scss";
+
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.greyLink {
+    composes: link;
+    composes: pSmall from "typography.module.scss";
+    color: $grey1;
+    border-bottom: 1px solid $grey1;
+}
+
+.actionLink {
+    composes: link;
+    font-weight: 500;
+}

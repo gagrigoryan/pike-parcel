@@ -1,0 +1,64 @@
+@import "../../styles/vars.module";
+
+.fileContainer {
+    margin-top: 15px;
+    &:first-child {
+        margin-top: 25px;
+    }
+}
+
+.fileName {
+    composes: pNormal from "../../styles/typography.module.scss";
+    font-weight: 500;
+    margin-right: 21px;
+}
+
+.deleteButton {
+    composes: actionLink from "../../styles/link.module.scss";
+}
+
+.inputContainer {
+    margin-top: 15px;
+}
+
+.input {
+    display: none;
+}
+
+.button {
+    width: 100%;
+}
+
+.error {
+    composes: error from "../input/baseInput.module.scss";
+    margin-top: 8px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.title {
+    composes: heading3 from "../../styles/typography.module.scss";
+    @include phoneMedia {
+        font-size: get-vw(20px);
+        line-height: get-vw(24px);
+    }
+}
+
+.prompt {
+    composes: pNormal from "../../styles/typography.module.scss";
+    color: $grey2;
+    margin-left: 11px;
+
+    @include phoneMedia {
+        margin-left: get-vw(34px);
+    }
+}
+
+.text {
+    composes: pNormal from "../../styles/typography.module.scss";
+    color: $grey1;
+}

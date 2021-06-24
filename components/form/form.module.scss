@@ -1,0 +1,119 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 60px 50px;
+
+    @include phoneMedia {
+        padding: get-vw(30px) get-vw(20px) get-vw(57px);
+    }
+}
+
+.step2Container {
+    composes: container;
+    padding-bottom: 60px;
+
+    @include phoneMedia {
+        padding-bottom: get-vw(86px);
+    }
+}
+
+.step3Container {
+    composes: step2Container;
+}
+
+.step4Container {
+    composes: container;
+    padding-bottom: 60px;
+
+    @include phoneMedia {
+        padding-bottom: get-vw(50px);
+    }
+}
+
+.title {
+    composes: heading1 from "../../styles/typography.module.scss";
+    composes: mobileHeading from "../../styles/typography.module.scss";
+    text-align: center;
+    color: $red;
+}
+
+.sectionTitle {
+    composes: heading3 from "../../styles/typography.module.scss";
+    margin-bottom: 15px;
+    width: 450px;
+
+    @include phoneMedia {
+        width: 100%;
+        font-size: get-vw(20px);
+        line-height: get-vw(24px);
+    }
+}
+
+.step {
+    composes: pMedium from "../../styles/typography.module.scss";
+    text-align: center;
+    color: $grey2;
+    margin-bottom: 45px;
+
+    @include phoneMedia {
+        margin-bottom: get-vw(34px);
+    }
+}
+
+.fields > * {
+    margin-bottom: 25px;
+}
+
+.checkboxesSection {
+    margin-top: 44px;
+}
+
+.checkboxesError {
+    composes: error from "../input/input.module.scss";
+    margin-bottom: 18px;
+}
+
+.checkboxes > :not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.checkboxesLabel {
+    composes: pMedium from "../../styles/typography.module.scss";
+    margin-bottom: 18px;
+}
+
+.checkboxesSection:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.qualityCheckboxesSection {
+    margin: 30px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+
+    @include phoneMedia {
+        button {
+            width: get-vw(147px);
+            min-width: get-vw(147px);
+        }
+    }
+}
+
+.link {
+    composes: link from "../../styles/link.module.scss";
+}
+
+.addressHeader {
+    composes: heading3 from "../../styles/typography.module.scss";
+    margin-bottom: 25px;
+}
+
+.addressSection {
+    margin-top: 40px;
+}

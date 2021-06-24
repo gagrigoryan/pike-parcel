@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "KievitPro";
+    src: local("KievitPro-Medium"), url("../public/fonts/KievitPro-Medium.woff") format("woff"),
+        url("../public/fonts/KievitPro-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "KievitPro";
+    src: local("KievitPro-Regular"), url("../public/fonts/KievitPro-Regular.woff") format("woff"),
+        url("../public/fonts/KievitPro-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,7 @@
+.cache/
+dist/
+/node_modules
+/.next/
+/build
+coverage
+.eslintrc

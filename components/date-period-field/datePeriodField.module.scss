@@ -1,0 +1,50 @@
+@import "../../styles/vars.module";
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    composes: label from "../input/baseInput.module.scss";
+}
+
+.input {
+    composes: input from "../input/baseInput.module.scss";
+    width: 288px;
+
+    @include phoneMedia {
+        width: get-vw(160px);
+    }
+}
+
+.inputError {
+    composes: inputError from "../input/baseInput.module.scss";
+}
+
+.error {
+    composes: error from "../input/baseInput.module.scss";
+    margin-bottom: 4px;
+}
+
+.separator {
+    font-size: 14px;
+    line-height: 18px;
+    color: $grey1;
+}
+
+.prompt {
+    composes: pNormal from "../../styles/typography.module.scss";
+    color: $grey1;
+    margin-top: 7px;
+    @include phoneMedia {
+        width: 90%;
+    }
+}

@@ -1,0 +1,60 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+    composes: container from "../input/baseInput.module.scss";
+}
+
+.input {
+    composes: input from "../input/baseInput.module.scss";
+    padding: 0;
+    box-shadow: none !important;
+}
+
+.valueContainer {
+    padding: 0 16px !important;
+    box-sizing: border-box;
+}
+
+.label {
+    composes: label from "../input/baseInput.module.scss";
+}
+
+.inputError {
+    composes: inputError from "../input/baseInput.module.scss";
+}
+
+.error {
+    composes: error from "../input/baseInput.module.scss";
+}
+
+.menuContainer {
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    & > div {
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $red;
+            border-radius: 0;
+        }
+    }
+}
+
+.shadowContainer {
+    width: 100%;
+    height: calc(100% + 48px);
+    top: -48px;
+    position: absolute;
+    box-shadow: 0 5px 15px rgba(56, 67, 84, 0.05), 0 10px 30px rgba(56, 67, 84, 0.05),
+        0 25px 50px -10px rgba(56, 67, 84, 0.1);
+    background: transparent;
+    border-radius: 4px;
+}

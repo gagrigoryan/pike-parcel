@@ -1,0 +1,43 @@
+@import "../../styles/vars.module.scss";
+
+.button {
+  composes: pNormal from "../../styles/typography.module.scss";
+  min-width: 203px;
+  height: 56px;
+  padding: 0 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $redHover;
+    border-color: $redHover;
+    box-shadow: $redShadow;
+    color: $white;
+  }
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    background-color: $grey4;
+    border-color: $grey3;
+    color: $grey1;
+    box-shadow: none;
+    cursor: default;
+  }
+}
+
+.buttonPrimary {
+  composes: button;
+  border-color: $red;
+  background-color: $red;
+  color: $white;
+}
+
+.buttonWhite {
+  composes: button;
+  border-color: $grey3;
+  background-color: $white;
+  color: $grey1;
+}

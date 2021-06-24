@@ -1,0 +1,25 @@
+@import "vars.module";
+@import-normalize;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, "KievitPro", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    font-feature-settings: "case" on;
+    * {
+        margin: 0;
+        padding: 0;
+        :focus {
+            outline: none;
+        }
+        ::-moz-focus-inner {
+            border: 0;
+        }
+    }
+}

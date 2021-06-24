@@ -1,0 +1,63 @@
+@import "../../styles/vars.module";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include phoneMedia {
+        flex-direction: column;
+    }
+}
+
+.text {
+    composes: pSmall from "../../styles/typography.module.scss";
+    color: $grey1;
+    display: block;
+    font-weight: 400;
+}
+
+.link {
+    composes: greyLink from "../../styles/link.module.scss";
+}
+
+.copyright {
+    width: 590px;
+
+    @include tabletLargeMedia {
+        width: 411px;
+    }
+
+    @include phoneMedia {
+        width: 100%;
+    }
+}
+
+.copyrightLink {
+    margin: 22px 0;
+}
+
+.info {
+    @include phoneMedia {
+        margin-top: get-vw(40px);
+        border-top: 1px solid $grey3;
+        padding-top: get-vw(30px);
+    }
+}
+
+.infoText {
+    margin: 22px 0;
+    @include phoneMedia {
+        margin-top: get-vw(27px);
+    }
+}
+
+.socialLinks {
+    display: flex;
+    list-style: none;
+}
+
+.socialLinksItem {
+    &:not(:last-child) {
+        margin-right: 11px;
+    }
+}

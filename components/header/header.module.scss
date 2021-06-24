@@ -1,0 +1,27 @@
+@import "../../styles/vars.module";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 208px;
+    height: 33px;
+    background: url("../icons/logo.svg") no-repeat;
+    background-size: cover;
+
+    @include phoneMedia {
+        width: get-vw(150px);
+        height: get-vw(24px);
+    }
+}
+
+.phone {
+    composes: heading3 from "../../styles/typography.module.scss";
+    composes: mobileHeading from "../../styles/typography.module.scss";
+    color: $headingBlack;
+    font-feature-settings: "case" on;
+    text-decoration: none;
+}

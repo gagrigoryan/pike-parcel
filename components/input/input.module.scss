@@ -1,0 +1,25 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+    composes: container from "./baseInput.module.scss";
+}
+
+.input {
+    composes: input from "./baseInput.module.scss";
+}
+
+.label {
+    composes: label from "./baseInput.module.scss";
+}
+
+.labelComment {
+    composes: labelComment from "./baseInput.module.scss";
+}
+
+.inputError {
+    composes: inputError from "./baseInput.module.scss";
+}
+
+.error {
+    composes: error from "./baseInput.module.scss";
+}

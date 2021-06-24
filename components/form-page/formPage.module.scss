@@ -1,0 +1,39 @@
+@import "../../styles/vars.module.scss";
+
+.container {
+  width: $pageBlockWidth;
+  margin-top: 24px;
+  margin-bottom: 162px;
+
+  @include phoneMedia {
+    width: $pageBlockPhoneWidth;
+    margin: 0;
+  }
+}
+
+.form2Container {
+  composes: container;
+  margin-top: 48px;
+  margin-bottom: 78px;
+  @include phoneMedia {
+    margin: 0;
+  }
+}
+
+.form3Container {
+  composes: container;
+  margin-top: 48px;
+  margin-bottom: 67px;
+  @include phoneMedia {
+    margin: 0;
+  }
+}
+
+.form4Container {
+  composes: container;
+  margin-top: 48px;
+  margin-bottom: 85px;
+  @include phoneMedia {
+    margin: 0;
+  }
+}
